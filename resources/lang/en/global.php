@@ -180,6 +180,8 @@ return [
     'price'                                => 'Price',
     'tags'                                 => 'Tags',
     'tag'                                  => 'Tag',
+    'gallery'                              => 'Gallery',
+    'images'                               => 'Images',
     'photo1'                               => 'Photo1',
     'photo2'                               => 'Photo2',
     'photo3'                               => 'Photo3',
@@ -311,7 +313,7 @@ return [
     'deselect_all'                         => 'Deselect all',
     'team-management'                      => 'Teams',
     'team-management-singular'             => 'Team',
-    'site_title'                           => 'Laravel + AdminLTE3',
+    'site_title'                           => 'Frogs&Roses',
     'userManagement'                       => [
         'title'          => 'User Management',
         'title_singular' => 'User Management',

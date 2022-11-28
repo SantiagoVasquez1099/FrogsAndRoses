@@ -4,7 +4,7 @@
     <div style="margin-bottom: 10px;" class="row">
         <div class="col-lg-12">
             <a class="btn btn-success" href="{{ route("admin.permissions.create") }}">
-                {{ trans('global.add') }} {{ trans('global.permission.title_singular') }}
+                <em class="fa fa-plus fa-lg mr-2"></em> {{ trans('global.add') }} {{ trans('global.permission.title_singular') }}
             </a>
         </div>
     </div>
@@ -41,20 +41,22 @@
                             </td>
                             <td>
                                 @can('permission_show')
-                                    <a class="btn btn-xs btn-primary" href="{{ route('admin.permissions.show', $permission->id) }}">
-                                        {{ trans('global.view') }}
+                                    <a class="btn btn-sm btn-primary" href="{{ route('admin.permissions.show', $permission->id) }}">
+                                        {{-- trans('global.view') --}}
+                                        <em class="fa fa-eye fa-lg"></em>
                                     </a>
                                 @endcan
                                 @can('permission_edit')
-                                    <a class="btn btn-xs btn-info" href="{{ route('admin.permissions.edit', $permission->id) }}">
-                                        {{ trans('global.edit') }}
+                                    <a class="btn btn-sm btn-warning" href="{{ route('admin.permissions.edit', $permission->id) }}">
+                                        {{-- trans('global.edit') --}}
+                                        <em class="far fa-edit fa-lg"></em>
                                     </a>
                                 @endcan
                                 @can('permission_delete')
                                     <form action="{{ route('admin.permissions.destroy', $permission->id) }}" method="POST" onsubmit="return confirm('{{ trans('global.areYouSure') }}');" style="display: inline-block;">
                                         <input type="hidden" name="_method" value="DELETE">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                        <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('global.delete') }}">
+                                        <button type="submit" class="btn btn-sm btn-danger" value="{{-- trans('global.delete') --}}"><em class="fa fa-trash-alt fa-lg"></em></button>
                                     </form>
                                 @endcan
                             </td>

@@ -75,7 +75,7 @@
                 @can('product_access')
                     <li class="nav-item">
                         <a href="{{ route("admin.products.index") }}" class="nav-link {{ request()->is('admin/products') || request()->is('admin/products/*') ? 'active' : '' }}">
-                            <i class="fas fa-cogs">
+                            <i class="fas fa-boxes">
 
                             </i>
                             <p>

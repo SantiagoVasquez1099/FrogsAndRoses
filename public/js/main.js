@@ -46,4 +46,51 @@ $(document).ready(function () {
       $(this).addClass('active')
     }
   })
+
+  end_loading();
 })
+
+
+function load_div(url_send,method_send,data_send,div_target,isAsync,modal){
+  start_loading()
+  $.ajax({
+    method: method_send,
+    url: url_send,
+    async:isAsync,
+    data: data_send
+  })
+    .done(function(response) {
+      try{
+      $("#container_"+div_target).html(response);
+      if(modal){
+        $("#modal_"+div_target).modal("show");
+      }  
+    }
+    catch(err) {
+        console.log(err.message);
+    }
+    })
+    .fail(function(response) {
+      console.log(response.responseJSON);
+      swal({
+        title: 'Error '+response.status,
+        text: response.statusText,
+        type: 'error',
+        confirmButtonText: '<i class="fa fa-check"></i> Continue',
+        showCloseButton: true,
+        confirmButtonClass: 'btn btn-danger',
+        buttonsStyling: false,
+        animation: false,
+        customClass: 'animated zoomIn',
+      });
+    })
+    .always(function() {
+      end_loading()
+    });
+}
+function start_loading(){
+  $(".se-pre-con").fadeIn("slow");
+}
+function end_loading(){
+  $(".se-pre-con").fadeOut("slow");
+}

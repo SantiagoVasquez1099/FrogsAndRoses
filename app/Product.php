@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use App\ProductImage;
 
 class Product extends Model
 {
@@ -23,4 +24,8 @@ class Product extends Model
         'deleted_at',
         'description',
     ];
+
+    public function images(){
+        return $this->hasMany(ProductImage::class);
+    }
 }

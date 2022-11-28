@@ -1,10 +1,11 @@
 <?php
 
-Route::redirect('/', '/login');
 
-Route::redirect('/home', '/admin');
+
 
 Auth::routes(['register' => false]);
+
+Route::get('/', 'AppController@index')->name('index');
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
     Route::get('/', 'HomeController@index')->name('home');
@@ -23,9 +24,17 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
     Route::delete('products/destroy', 'ProductsController@massDestroy')->name('products.massDestroy');
 
+    Route::get('/products/load/row/images/{id}', 'ProductsController@loadRowImages')->name('products.loadRowImages');
+
+    Route::post('/products/upload/images/{id}', 'ProductsController@uploadImage')->name('products.uploadImage');
+
+    Route::delete('/products/delete/images/{id}', 'ProductsController@deleteImage')->name('products.deleteImage');
+
     Route::resource('products', 'ProductsController');
 
-    Route::delete('menu/destroy', 'MenuController@massDestroy')->name('menu.massDestroy');
+    Route::get('/gallery/load/row/images', 'HomeController@loadRowImages')->name('gallery.loadRowImages');
 
-    Route::resource('menu', 'MenuController');
+    Route::post('/gallery/upload/images', 'HomeController@uploadImage')->name('gallery.uploadImage');
+
+    Route::delete('/gallery/delete/images/{id}', 'HomeController@deleteImage')->name('gallery.deleteImage');
 });
