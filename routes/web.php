@@ -5,7 +5,20 @@
 
 Auth::routes(['register' => false]);
 
-Route::get('/', 'AppController@index')->name('index');
+Route::get('/', 'PublicController@index')->name('public.index');
+
+Route::get('/nous', 'PublicController@nous')->name('public.nous');
+
+Route::get('/menu', 'PublicController@menu')->name('public.menu');
+
+Route::get('/tapas', 'PublicController@tapas')->name('public.tapas');
+
+Route::get('/images', 'PublicController@images')->name('public.images');
+
+Route::get('/shop', 'PublicController@shop')->name('public.shop');
+
+Route::get('/contact', 'PublicController@contact')->name('public.contact');
+
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
     Route::get('/', 'HomeController@index')->name('home');

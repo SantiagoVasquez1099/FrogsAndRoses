@@ -99,6 +99,12 @@ p {
 
 a {
   text-decoration: none !important;
+  color:#960101;
+  transition: 300ms;
+}
+
+a:hover, a:active, a:focus {
+  color:#252222b3;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -938,33 +944,6 @@ menu
   overflow: hidden;
 }
 
-.card1 {
-  background-image: url(../images/menu-item-01.jpeg);
-}
-.card2 {
-  background-image: url(../images/menu-item-02.jpeg);
-}
-.card3 {
-  background-image: url(../images/menu-item-03.jpeg);
-}
-.card4 {
-  background-image: url(../images/menu-item-04.jpeg);
-}
-.card5 {
-  background-image: url(../images/menu-item-05.jpeg);
-}
-.card6 {
-  background-image: url(../images/menu-item-06.jpeg);
-}
-.card7 {
-  background-image: url(../images/menu-item-07.jpeg);
-}
-.card8 {
-  background-image: url(../images/menu-item-08.jpeg);
-}
-.card9 {
-  background-image: url(../images/menu-item-09.jpeg);
-}
 .info {
   position: relative;
   width: 100%;

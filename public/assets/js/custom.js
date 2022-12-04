@@ -80,7 +80,7 @@
 
 	$('.owl-menu-item').owlCarousel({
 		items:5,
-		loop:true,
+		loop:false,
 		dots: true,
 		nav: true,
 		autoplay: true,

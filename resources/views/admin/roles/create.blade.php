@@ -7,7 +7,7 @@
     </div>
 
     <div class="card-body">
-        <form action="{{ route("admin.roles.store") }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('admin.roles.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group {{ $errors->has('title') ? 'has-error' : '' }}">
                 <label for="title">{{ trans('global.role.fields.title') }}*</label>
