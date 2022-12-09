@@ -1,18 +1,15 @@
 @extends('layouts.public')
 @section('content')
-<div class="page-heading header-text">
+<div class="page-heading header-text wow fadeInLeft" data-wow-delay="0.8s">
     <div class="container">
-        <div class="row wow fadeInLeft" data-wow-delay="0.8s">
-            <div class="col-md-12">
-                <h1>BIENVENUES</h1>
-                <span>Frogs&Roses</span>
-            </div>
+        <div class="row" >
+
         </div>
     </div>
 </div>
 <div id="content">
     <div class="home_content" id="post-10">
-        <div class="post-header">
+        <div class="post-header wow fadeInUp" data-wow-delay="0.5s">
             <h1 class="page-title"><a>Chez nous…</a></h1>
 
             <p>Bonjour à tous,<br>

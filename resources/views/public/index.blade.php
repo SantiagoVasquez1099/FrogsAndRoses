@@ -2,12 +2,12 @@
 @section('content')
 <div id="top">
     <div class="container-fluid">
-        <div class="row">
+        <div class="row ">
             <div class="col-lg-4">
-                <div class="left-content">
+                <div class="left-content wow fadeInLeft" data-wow-delay="0.7s">
                     <div class="inner-content">
                         <a href="{{ route('public.index') }}" class="logo">
-                            <img src="{{ asset('assets/images/LogoFinal.png') }}" width="300px">
+                            <img src="{{ asset('assets/images/Frogs&Roses-MenuDigital.png') }}" width="300px">
                         </a>
                         <h6>LA MEILLEURE EXPÉRIENCE</h6>
                         <div class="main-white-button scroll-to-section">
@@ -18,7 +18,7 @@
             </div>
             <div class="col-lg-8">
                 <div class="main-banner header-text">
-                    <div class="Modern-Slider">
+                    <div class="Modern-Slider wow fadeInRight" data-wow-delay="0.7s">
                         <!-- Item -->
                         <div class="item">
                             <div class="img-fill">
@@ -50,7 +50,7 @@
 
 <div class="request-form">
     <div class="container">
-        <div class="row wow fadeInUp">
+        <div class="row wow fadeInUp" data-wow-delay="0.5s">
             <div class="col-md-8">
                 <h4>Jetez un coup d'œil à notre prix Tripadvisor Travellers' Choice</h4>
                 <p>Nous sommes situés dans les 10% d'établissements
@@ -73,7 +73,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-6 col-xs-12">
-                <div class="left-text-content">
+                <div class="left-text-content wow bounceIn" data-wow-delay="0.4s">
                     <div class="section-heading">
                         <h6>Près de nous</h6>
                         <h2>UN PETITMOT...</h2>
@@ -87,7 +87,7 @@
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-xs-12">
-                <div class="right-content">
+                <div class="right-content wow fadeInRight" data-wow-delay="1.0s">
                     <div class="thumb">
                         <img src="{{ asset('assets/images/bienvenue.jpeg') }}" alt="">
                     </div>
@@ -100,7 +100,7 @@
 <!-- ***** Reservation Us Area Starts ***** -->
 <section class="section" id="reservation">
     <div class="container">
-        <div class="row">
+        <div class="row wow rotateInUpLeft" data-wow-delay="0.8s">
             <div class="col-lg-6 align-self-center">
                 <div class="left-text-content">
                     <div class="section-heading">
@@ -113,7 +113,7 @@
                             <div class="phone">
                                 <i class="fa fa-phone"></i>
                                 <h4>Numéro de Téléphone</h4>
-                                <span><a href="#">026-664-01-01</a></span>
+                                <span><a href="tel:0266640101">026-664-01-01</a></span>
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -129,7 +129,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="contact-form">
-                    <form id="contact" action="https://formspree.io/f/mbjbzzwl" method="post">
+                    <form id="contact" action="https://formspree.io/f/mzbwnkvl" method="post">
                         <input name="subject" type="hidden" id="subject" value="Contacto Página Web" required="">
                         <div class="row">
                             <div class="col-lg-12">

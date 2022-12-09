@@ -15,6 +15,7 @@
         "intervention/image": "^2.7",
         "laravel/framework": "^6.0",
         "laravel/tinker": "^1.0",
+        "spatie/laravel-cookie-consent": "^2.12",
         "yajra/laravel-datatables-oracle": "~9.0"
     },
     "require-dev": {

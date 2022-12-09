@@ -1,12 +1,8 @@
 @extends('layouts.public')
 @section('content')
-<div class="page-heading3 header-text">
+<div class="page-heading3 header-text wow fadeInLeft" data-wow-delay="0.8s">
     <div class="container">
-        <div class="row wow fadeInLeft" data-wow-delay="0.8s">
-            <div class="col-md-12">
-                <h1>IMAGES</h1>
-            </div>
-        </div>
+        
     </div>
 </div>
 <div id="content">

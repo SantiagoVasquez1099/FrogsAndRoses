@@ -1,12 +1,8 @@
 @extends('layouts.public')
 @section('content')
-<div class="page-heading4 header-text">
+<div class="page-heading4 header-text wow fadeInLeft" data-wow-delay="0.8s">
     <div class="container">
-        <div class="row wow fadeInLeft" data-wow-delay="0.8s">
-            <div class="col-md-12">
-                <h1>Frogs Shop</h1>
-            </div>
-        </div>
+        
     </div>
 </div>
 <div id="content">
@@ -22,7 +18,7 @@
             <div class="owl-menu-item owl-carousel">
                 @foreach($products as $key => $product)
                     <div class="item">
-                        <div class='card' style="background-image: url({{ asset($product->images[0]->route) }})">
+                    <div class='card' style="background-image: url({{ (count($product->images) > 0) ? asset($product->images[0]->route) : '' }})">
                             <div class="price">
                                 <h6>{{ $product->price }}</h6>
                             </div>

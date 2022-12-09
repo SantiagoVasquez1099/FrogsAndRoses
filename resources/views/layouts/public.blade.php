@@ -25,6 +25,8 @@
 
     <link rel="stylesheet" href="{{ asset('assets/css/lightbox.css') }}">
 
+    <link rel="stylesheet" href="{{ asset('assets/css/animate.min.css') }}">
+
     @yield('styles')
 </head>
 
@@ -93,6 +95,7 @@
         @yield('content')
     </section>
     <!-- /.content -->
+    @include('cookieConsent::index')
 
     <!-- ***** Footer Start ***** -->
     <footer>
@@ -101,11 +104,11 @@
                 <div class="col-lg-4 col-xs-12">
                     <div class="right-text-content">
                         <ul class="social-icons">
-                            <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <li><a href="https://m.facebook.com/FrogsandRoses1930/" target="_blank"><i class="fa fa-facebook"></i></a>
                             </li>
                             <li><a href="https://www.instagram.com/frogsandroses19/" target="_blank"><i
                                         class="fa fa-instagram"></i></a></li>
-                            <li><a href="https://api.whatsapp.com/" target="_blank"><i class="fa fa-whatsapp"></i></a>
+                            <li><a href="tel:0266640101" target="_blank"><i class="fa fa-phone"></i></a>
                             </li>
                             <li><a href="https://mail.google.com/mail/u/0/?hl=es&tf=cm&fs=1&to=contact@frogsandroses.ch"
                                     target="_blank"><i class="fa fa-envelope"></i></a></li>
@@ -113,12 +116,9 @@
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="logo">
-                        <a href="https://www.tripadvisor.fr/Restaurant_Review-g198814-d8766342-Reviews-Frogs_Roses_Cafe-Estavayer_le_Lac_Canton_of_Fribourg.html"
-                            target="_blank"><img
-                                src="https://static.tacdn.com/img2/travelers_choice/widgets/tchotel_2022_LL.png"
-                                alt="TripAdvisor" class="widCOEImg" id="CDSWIDCOELOGO" /></a>
-                    </div>
+                <div class="logo">
+                        <img src="assets/images/logo-Guia-removebg-preview.png" height="200px" width="150px">
+                      </div>
                 </div>
                 <div class="col-lg-4 col-xs-12">
                     <div class="left-text-content">
@@ -156,7 +156,18 @@
     <!-- Global Init -->
     <script src="{{ asset('assets/js/custom.js') }}"></script>
 
-    <script>
+    <script src="{{ asset('assets/js/wow.min.js') }}"></script>
+
+<script>
+    var wow = new WOW({
+        boxClass: 'wow',
+        animateClass: 'animated',
+        offset: 100,
+        mobile: true,
+        live: true
+    });
+    wow.init();
+
         $(function () {
             var selectedClass = "";
             $("p").click(function () {
